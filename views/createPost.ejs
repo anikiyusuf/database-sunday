@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-heading">
+        <h1>Create New Post:</h1>
+        <span class="subheading">Dont be shy, write something new.</span>
+    </div>
+
+
+
+        <form action="/posts/store" method= "POST" >
+         
+                <input class="form-control" name="title" id="title" type="text" placeholder="Title..."  required/>
+                <label for="title">Title</label>
+
+            
+                <input class="form-control" name="author" id="author" type="text" placeholder="Author..." required/>
+                <label for="author">Author's Name</label>
+               
+           
+                <input class="form-control" name="description" id="description" type="text" placeholder="Enter blog description..." required/>
+                <label for="description">Description</label>
+               
+          
+                <textarea class="form-control" name="body" id="body" placeholder="Enter your message here..." style="height: 12rem" ></textarea>
+                <label for="message">Body</label>
+            </div>
+            <br />
+            </div>
+
+            <!-- Submit Button-->
+            <button type="submit" class="btn btn-primary " id="submitButton" >Send</button>
+        </form>
+    
+
+</body>
+</html>
