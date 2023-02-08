@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 
 const { checkUser } = require("./middleware/authMiddleware");
 const userRouter = require('./routes/userRoute')
+const blogRouter = require('./routes/blogRoute')
 
 
 
@@ -28,30 +29,42 @@ connectionMongoDB()
 
 
 
-app.use('/user' , userRouter)
+app.use('/user', userRouter)
+
+app.use('/blog', blogRouter)
 
 // views 
 app.set('view engine', 'ejs')
 app.set('view engine')
 
 
+
+// View Pages
 app.get('/', (req, res) => {
-    res.render('index');
+  res.render('index');
 });
-
-
-
-// View Test 
 app.get("/register", (req, res) => {
     res.render("register");
   });
-  
+
   app.get("/enter", (req, res) => {
     res.render("enter");
   });
 
   app.get("/posts/new", checkUser, (req, res) => {
     res.render("createPost");
+  });
+  
+  app.get("/search", (req, res) => {
+    res.render("searchBlog");
+  });
+   
+  app.get("/post", (req, res) => {
+    res.render("post");
+  });
+  
+  app.get("/error", (req, res) => {
+    res.render("error");
   });  
 // app.get("/" , (req,res)=>{
 //     res.send("Hello World ")
@@ -60,7 +73,7 @@ app.get("/register", (req, res) => {
 app.use((err, req, res, next) => {
     console.log(err);
     res.status(400);
-    res.redirect("/error");
+    res.redirect("/error")
   });
 
 app.listen(PORT , () =>{

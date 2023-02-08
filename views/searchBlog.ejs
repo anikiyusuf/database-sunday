@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('layouts/header.ejs')
+<body>
+
+ <h1>Search for a blog</h1>
+           
+
+    <!-- Main Content-->
+    <main class="mb-4">
+      <form action="/blog/search" method="GET" id="contactForm">
+         <input class="form-control" name="dsearch" id="search" type="text" />
+            <label for="description">Search by Author or Title</label>
+                
+                <button type="submit" class="btn btn-primary " id="submitButton" >Search</button>
+                        </form>
+                        <!-- ----------- -->
+                        <span style="font-size: 12px;color: #d63384;">Click for more...</span>
+                              
+                            <p class="post-meta">
+                                Posted by
+                                <a href="#!"></a>
+                             </p>
+            
+        
+    </main>
+      
+</body>
+</html>

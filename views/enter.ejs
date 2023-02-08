@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('layouts/header.ejs') %>
 <body>
     <h1> Login to account</h1>
     <form   action="/user/login" method="POST" >
         <label for="description">Email</label>
-        <input type="email" placeholder="Enter email..." type="email" id="email" required/>
+        <input type="email" placeholder="Enter email" name="email" id="email" required/>
         <label for="description">Password</label>
-        <input type="password" placeholder="Enter Password... " type="password" id="password" required/>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required/>
         <button type="submit"  id="submitButton" >Register</button>
     </form> 
 </body>

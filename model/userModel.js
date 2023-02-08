@@ -22,10 +22,15 @@ const UserSchema = new Schema({
         type: String,
         require:true
     },
+    blogId: { type: Array, default: [] },
     createAt : {
       type: Date,
       default: Date.now
-  }
+  },
+lastUpdateAt : {
+    type: Date,
+    default: Date.now
+},
 });
 
 
